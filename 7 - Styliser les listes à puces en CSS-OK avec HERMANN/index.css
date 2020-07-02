@@ -1,0 +1,87 @@
+/** CSS à écrire */ ul{
+text-align: center;
+list-style-type:none;
+
+
+}
+.list1 li::before{
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 9px solid black;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent !important;
+  margin-right: 5px;
+
+
+
+}
+.list2 li::before{
+  display: inline-block;
+  content: "";
+  height: 5px;
+  width: 5px;
+  border: 2.5px solid blue;
+  transform: rotate(45deg);
+  margin-right:5px;
+
+
+}
+
+li{
+  margin-left: 5px;
+}
+
+/*.list2 li::after{
+  width  : 0;
+ height : 0;
+ content : '';
+ position:relative;
+ top  : -12px;
+ border :5px solid transparent;
+ border-bottom-color:green;
+ margin-left: -60px;
+
+}
+
+.list2 li::before{
+  width  : 0px;
+ height : 0;
+ content : '';
+ position: relative;
+ left : -15px;
+ top  : 15px;
+ border : 5px solid transparent;
+ border-top-color : green;
+ margin-right: 0px;
+} second method to draw a dimaond */
+
+
+.list3{
+  counter-reset: liste;
+
+
+}
+
+.list3 li {
+  counter-increment: liste;
+  margin-bottom: 5px;
+  margin-left: -1px;
+
+}
+
+.list3 li::before{
+
+  content:counter(liste);
+  color: white;
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+  border-radius: 50%;
+  font-weight:bold;
+  padding: 2px 6px;
+  margin-right: 5px;
+
+
+}
