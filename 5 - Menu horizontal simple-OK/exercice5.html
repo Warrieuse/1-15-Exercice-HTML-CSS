@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+	<title>Menu simple</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+	/* Je définit la grandeur de ma boite nav et je centre le texte présent*/
+	   .nav{
+			 width: 100%;
+			 height: 150px;
+			 text-align: center;
+		 }
+
+/*Je definit egalement la grandeur et la disposition de li qui correspont à mes ancres.
+Encadré avec le texte centré au milieu - les cases doivent avoir le meme espaces entre elles -
+une police d'eciture en gras */
+		 li{
+			display: inline-flex;
+			width: 150px;
+			height: 50px;
+			justify-content: space-around;
+			align-items: center;
+			border: solid 1px black;
+			margin: 50px 10px;
+			font-weight: bold;
+		 }
+
+/* lorsque le liens n'est pas touché par la souris le texte n'est pas souligné et de couleur
+violette.*/
+		 a:link, a:visited{
+			 text-decoration: none;
+			 color: #551a8b;
+		 }
+
+ /* lorsque le liens est pas touché par la souris le texte n'est pas souligné et la case change
+ de couleur et devient bleue.*/
+		 li:hover{
+			 text-decoration: none;
+			 background-color: #3498db;
+			 color: white;
+		 }
+
+/* lorsque je passe la souris sur le texte du liens l'ecriture change egalement de couleur
+et devient blanc*/
+		 a:hover	{
+			 color: white;
+		 }
+
+		 /*.nav a:hover{
+			 color: white;
+		 }*/
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
