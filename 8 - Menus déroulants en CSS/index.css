@@ -1,0 +1,88 @@
+
+.nav{
+  list-style-type: none; /* j'enleve toute les
+   puces*/
+}
+
+.nav>li{  /* je selectionne tout les li du nav
+  soit tout les noms des menus
+  en ligne avec une marge de 5px*/
+  display: inline-block;
+  margin: 5px;
+  color: grey;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 200px;
+  text-align: center;
+}
+
+.nav>li>a{ /* je selectionne "services" qui
+est l'ancre du li du nav en ligne sans soulignement
+de couleur grise une marge interieur de
+10px autours du texte et un grandeur de police
+de 1.5em"*/
+  display:inline-block;
+  text-decoration: none;
+  color: grey;
+  width: 200px;
+  background-color: pink;
+}
+
+.nav>li:hover{ /* lorsque la souris passe
+  sur les menus alors une barre blue apparais souris
+  le texte*/
+  border-bottom: 4px solid #39c;
+}
+
+.deroulant{ /* je positionne les sous menus par raport
+  à son parent.*/
+  position: relative;
+  opacity: 0.5;
+
+}
+
+.sous{ /* je positionne les sous menu en absolu
+  comme ca ils se place en bas quand la souris
+  paseras sur "servives"*/
+  position: absolute;
+  visibility: collapse; /*invisible et ne change rien
+  a la disposition de mes block.*/
+  float: left;
+}
+
+.deroulant:hover .sous{
+  visibility: visible; /* quand la souris est
+  sur "services" le sous menu apparais*/
+  list-style-type: none; /* sans les puces*/
+}
+
+.sous>li{ /* je selectionnne uniquement
+  les listes du menu deroulant */
+  text-align: center;
+  background-color: grey;
+  line-height: 1.5em;
+  font-size: 1em;
+  padding: 5px 0;
+  border: 1px #fff solid;
+  width:200px;
+  margin-left: -42px;/* je met cette
+  marge car sinon mon menu n'est pas
+  centré a son parent.*/
+
+}
+
+.sous>li>a{ /* je selectionne uniquement les ancres
+  de mon menu deroulant comme ca la police d'ecriture
+  est blanche et plus de soulignement*/
+  text-decoration:none;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+}
+
+.sous>li:hover a{ /* lorsue je passe ma souris
+  sur les liste du menu deroulant l'arrière
+  plan devient gris. */
+  background:pink;
+  visibility: visible;
+}
