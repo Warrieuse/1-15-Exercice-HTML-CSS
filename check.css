@@ -1,0 +1,97 @@
+*{      /* j'enleve les marge car certains
+navigateur mette une marge par defaut
+histoire que ma checkbox ait le même visuelle
+dans tout les navigateur et un fond blanc cassé
+pour un confort oculaire.*/
+  margin: 0;
+  padding: 0;
+  /*background-color:#f3f3f3;*/
+}
+
+.center{
+  position:absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  /* Je positionne ma check box au centre*/
+}
+
+.yess{  /* je donne à mon label une taille un couleur
+  et une bordure. */
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: rgba(246,69,93,0.8);
+  border: 1px solid grey;
+  border-radius: 30px;
+  position: relative; /* position relative pour que les 2 soit aligné*/
+  box-shadow: 8px 5px rgba(246,69,93,0.3);/* je rajoute une ombre en bas à
+  droite histoire que ce soit un peut plus jolie :-)*/
+  transition: background-color 1s; /*Je souhaite une transition
+  pour la couleur de ma checkbox egalement d'une durée de 1s je note rien a la
+   suite car par defaut ease me convient.*/
+}
+
+#check{
+  opacity:0;  /* je cache le bouton de la checkbox
+  avec opacity*/
+}
+
+#check:checked~.yess{ /* quand je clique sur ma check box je veut que mon
+  label change de couleur. */
+  background-color: rgba(128,250,108,0.8);
+  box-shadow: 8px 5px rgba(128,250,108,0.3)/* je rajoute une ombre en bas à
+  droite histoire que ce soit un peut plus jolie :-)*/
+
+}
+
+.yess::after{ /* après mon label je crée une cercle qui feras office de
+  bouton et qui slideras et je le place a gauche du label entier.*/
+  content: "";
+  position:absolute; /* position relative au dessus donc moi en absolu*/
+  width: 50px;
+  height: 50px;
+  background-color:white;
+  border: 0.5px solid grey;
+  border-radius: 50%;
+  transform: translate(-5%, -1%);
+  left: 0px;    /* je veut que ma transition se fasse sur left dans un temps
+  de 0.5s.*/
+  transition: left 0.5s;
+}
+
+#check:checked~.yess::after{ /* lorsque je clique sur la checkbox
+  je souhaite que le rond que j'ai crée avec le label after slide
+  vers la gauche*/
+  left: 57px;
+}
+.NON{     /* Ma check box fonctionne mais manque les ecritures
+  position absolue pour que je puise déplacé les div sur ma checkbox.*/
+  position: absolute;
+  opacity: 1;
+  margin-top: -37px;
+  margin-left: 52px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#check:checked~.NON{ /* lorsque je clique sur ma checkbox je souhaite que mon
+  NON disparaise*/
+  opacity: 0;
+}
+
+.OUI{   /* Ma check box fonctionne mais manque les ecritures
+  position absolue pour que je puise déplacé les div sur ma checkbox.*/
+  position: absolute;
+  opacity: 0;
+  margin-top: -37px;
+  margin-left: 11px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+#check:checked~.OUI{ /* Lorsque je clique sur ma checkbox mon OUI apparais*/
+  opacity: 1;
+
+}
