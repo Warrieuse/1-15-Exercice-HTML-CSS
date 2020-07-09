@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding:0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: #2F4858;
+  font-family: times, serif;
+  color: white;
+
+}
+
+.text{
+padding: 20px;
+text-align: center;
+line-height: 1.5px;
+}
+
+img{
+  float: left;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+h4{
+  font-size: 15px;
+}
+
+h5{
+  font-size: 24px;
+}
+
+.text p{
+  font-size: medium;
+  font-style: italic;
+  font-weight: 100;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: times,serif;
+
+}
+
+.gauche{
+  width: 15%;
+  height: 800px;
+  background-color: #86BBD8;
+  border-top: 3px solid #9FE694;
+  float: right;
+
+}
+
+.gauche .info{
+  width: 80%;
+  margin: 10px;
+}
+
+h3{
+  color: #3A5768;
+  font-size: 16px;
+}
+
+.gauche p {
+  margin-left: 38px;
+  line-height: 24px;
+}
+
+.droite{
+  width: 85%;
+  height: 800px;
+  background-color: #FAF8F8;
+  float: right;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+}
+
+.droite .poste{
+  margin-left: 50px;
+}
+
+.poste h2{
+  width: 30%;
+  border-bottom:3px solid #9FE694;
+}
+
+/*.poste p:first-of-type{
+  font-style: italic;
+}*/
+
+.poste p:nth-child(2n+0){
+  font-style: italic;
+}
+
+
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: #2F4858;
+  font-family: times, serif;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}

@@ -1,0 +1,61 @@
+caption{
+  font-size: 1.5em;
+  text-transform: capitalize; /* uniquement 1er lettre de chaque
+  mot est en majuscule.*/
+}
+
+table{
+  border:0; /*on enleve les bors du tableau*/
+}
+
+th, td{ /* marge interne de 10px et texte centré*/
+  padding: 10px;
+  text-align: center;
+}
+
+tr:first-child th:nth-child(2){ /* on cible 1er enfant de tr et
+  2eme enfant de th : on change la taille de la police et on la change egalement
+  en bleu*/
+  font-size: 2em;
+  color: blue;
+  border-color: black; /* rajout car la bordure de la cellule est BLEU du coup
+  a cause de firefox uniquement.*/
+}
+
+tbody tr:nth-child(even){ /* tout les enfant pair de tr dans le tbody
+  doivent avoir une couleur en arrère plan */
+  background-color: #fcb941;
+}
+
+tbody tr:nth-child(odd){ /* tout les les enfants impaire de tr dans tbody
+  doivent avoir une autre couleur de fond*/
+  background-color: #f1654c;
+}
+
+tbody tr:nth-child(odd) td:first-child{ /*  de tout les tr enfant impaire
+   de tbody je prend le 1er td je lui change sa couleur d'arrière plan et
+   sa couleur de police  */
+  background-color: #7e3661;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) td:first-child{ /*  de tout les tr enfant paire
+   de tbody je prend le 1er td je lui change sa couleur d'arrière plan et
+   sa couleur de police  */
+  background-color: #888888;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) td:last-child{ /*  de tout les tr enfant impaire
+   de tbody je prend le dernier td je lui change sa couleur d'arrière plan et
+   sa couleur de police  */
+  background-color: #8870ff;
+  color: #fff;
+}
+
+th:last-child[rowspan]{ /* le selectionne le dernier enfant avec attibut
+  [rowspan] donc celui qui est vide et je lui enlève la bordure
+  droite et celle d'en haut.*/
+  border-right:none;
+  border-top:none;
+}

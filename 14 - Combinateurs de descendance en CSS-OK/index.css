@@ -1,0 +1,19 @@
+.article p{
+  margin-left: 20px;
+  }
+
+h2+p{ /* grace a + je selectionne uniquement les 1er enfant direct de
+   h2 pour
+  leur mettre une couleur de fond jaune*/
+  background-color: yellow;
+}
+
+h2~p{   /* je souhaite que tout les frère p de h2 ait une bordure
+  noir continue de taille 1px*/
+  border: 1px solid black;
+}
+
+li>p{ /* je veut que seulement les
+  p d'une liste li soit de couleur vert */
+  color: green;
+}

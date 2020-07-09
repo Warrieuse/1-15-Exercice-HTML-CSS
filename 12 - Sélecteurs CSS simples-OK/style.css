@@ -1,0 +1,23 @@
+body{
+  color: white;
+}
+
+#layout{
+  background-color: black;
+  width: 500px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.gauche{
+  text-align: left;
+}
+
+.droite{
+  text-align: right;
+}
+
+button{
+  background-color: #0000ff;
+  color: white;
+}
